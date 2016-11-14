@@ -1,0 +1,39 @@
+html { 
+
+}
+
+@font-face {
+  font-family: 'NFLRedZoneTech';
+  src: url('bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'NFLRedZoneTech', georgia, sans-serif;
+  background: url('http://static.nfl.com/static/content/public/static/img/head/aug-16-2016-background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#head_banner {
+  height: 50px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#doc {
+  margin: 0 auto;
+  font-family: 13px arial;
+  width: 959px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  -o-box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  background-color: white;
+}
+
+#team-info {
+
+}
