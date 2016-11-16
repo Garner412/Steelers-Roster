@@ -8,17 +8,45 @@
 <table>
   <thead>
     <tr>
-      <th class="headers first">No</th>
-      <th class="headers">Name</th>
-      <th class="headers">Height</th>
-      <th class="headers">Weight</th>
-      <th class="headers">Birthdate</th>
-      <th class="headers">Exp</th>
-      <th class="headers last">College</th>
+      <th class="headers">
+        <a href="#" ng-click="order = 'JerseyNumber'; reverseSort = !reverseSort">
+        No <span ng-show="order == 'JerseyNumber'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
+      <th class="headers">
+        <a href="#" ng-click="order = 'LastName'; reverseSort = !reverseSort">
+        Name <span ng-show="order == 'LastName'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
+      <th class="headers">
+        <a href="#" ng-click="order = 'Height'; reverseSort = !reverseSort">
+        Height <span ng-show="order == 'Height'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
+      <th class="headers">
+        <a href="#" ng-click="order = 'Weight'; reverseSort = !reverseSort">
+        Weight <span ng-show="order == 'Weight'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
+      <th class="headers">
+        <a href="#" ng-click="order = 'Birthdate'; reverseSort = !reverseSort">
+        Birthdate <span ng-show="order == 'Birthdate'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
+      <th class="headers">
+        <a href="#" ng-click="order = 'AccruedSeasons'; reverseSort = !reverseSort">
+        Exp <span ng-show="order == 'AccruedSeasons'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
+      <th class="headers last">
+        <a href="#" ng-click="order = 'College'; reverseSort = !reverseSort">
+        College <span ng-show="order == 'College'"><span ng-show="!reverseSort">v</span><span ng-show="reverseSort">^</span>
+        </a>
+      </th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="player in roster">
+    <tr ng-repeat="player in roster | orderBy:order:reverseSort">
       <td>{{ player.JerseyNumber }}</td>
       <td>{{ player.LastName + ", " + player.FootballName }}</td>
       <td>{{ player.Height }}</td>

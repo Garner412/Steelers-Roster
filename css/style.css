@@ -21,7 +21,7 @@ body {
 #doc {
   margin: 0 auto;
   font-family: 13px arial;
-  width: 600px;
+  width: 700px;
   text-align: left;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
   -moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
@@ -33,7 +33,7 @@ body {
 .team-info {
   margin: 20px;
   padding: 10px;
-  width: 412px;
+  width: 460px;
   border: 1px solid black;
   background: -moz-linear-gradient(top, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
   background: -webkit-linear-gradient(top, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
@@ -76,12 +76,13 @@ th {
 .headers {
   padding: 4px;
   border-bottom: 1px solid #adadad;
+  width: 40px;
 }
 
 #team-roster-title th {
   background-color: black;
   padding-left: 2px;
-  width: 432px;
+  width: 478px;
   height: 10px;
   color: white;
   text-transform: uppercase;

@@ -1,5 +1,7 @@
 app.controller('TeamController', ['$scope', '$http', function($scope, $http) {
 
+  $scope.reverseSort = false;
+
   $http.get('data/roster.json').success(function(data){
     $scope.teamInfo = data.Team[0];
     $scope.roster = data.Roster;
@@ -12,4 +14,6 @@ app.controller('TeamController', ['$scope', '$http', function($scope, $http) {
     element = element.match(/\d{12}/)
     return element[0] ;
   }
+
+
 }]);
