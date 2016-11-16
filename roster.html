@@ -1,0 +1,31 @@
+<table id="team-roster-title">
+  <tbody>
+    <tr id="team-roster-title">
+      <th>Pittsburgh Steelers</th>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th class="headers first">No</th>
+      <th class="headers">Name</th>
+      <th class="headers">Height</th>
+      <th class="headers">Weight</th>
+      <th class="headers">Birthdate</th>
+      <th class="headers">Exp</th>
+      <th class="headers last">College</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="player in roster">
+      <td>{{ player.JerseyNumber }}</td>
+      <td>{{ player.LastName + ", " + player.FootballName }}</td>
+      <td>{{ player.Height }}</td>
+      <td>{{ player.Weight }}</td>
+      <td>{{ player.Birthdate | date:'MM/dd/yyyy' }}</td>
+      <td>{{ player.AccruedSeasons }}</td>
+      <td>{{ player.College }}</td>
+    </tr>
+  </tbody>
+</table>
