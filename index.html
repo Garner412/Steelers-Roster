@@ -4,12 +4,62 @@
   <meta charset="utf-8">
   <title>Pittsburgh Steelers Roster</title>
   <link href="css/style.css" rel="stylesheet">
+  <!-- Vendor Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   
 </head>
 <body>
 <div id="doc">
   <div id="head_banner" style="background-image:url(http://i.nflcdn.com/static/site/7.4/img/subheaders/pit.png) !important;"></div>
-  <h1> Pittsburgh Steelers </h1>
+  <main>
+    <div ng-controller="TeamController">
+    <div class="team-info">
+      <img class="pitlogo" src="css/PIT-logo.gif">
+      <div class="team">
+        <p>{{ teamInfo.Club_Name }}</p>
+        <p class="team-details">Conference: {{ teamInfo.Conference }}</p>
+        <p class="team-details">Division: {{ teamInfo.Division }}</p>
+        <p class="team-details">Stadium: {{ teamInfo.StadiumName }}</p>
+      </div>
+    </div>
+      <table id="team-roster-title">
+        <tbody>
+          <tr id="team-roster-title">
+            <th>Pittsburgh Steelers</th>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th class="headers first">No</th>
+            <th class="headers">Name</th>
+            <th class="headers">Height</th>
+            <th class="headers">Weight</th>
+            <th class="headers">Birthdate</th>
+            <th class="headers">Exp</th>
+            <th class="headers last">College</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="player in roster">
+            <td>{{ player.JerseyNumber }}</td>
+            <td>{{ player.LastName + ", " + player.FootballName }}</td>
+            <td>{{ player.Height }}</td>
+            <td>{{ player.Weight }}</td>
+            <td>{{ player.Birthdate | date:'MM/dd/yyyy' }}</td>
+            <td>{{ player.AccruedSeasons }}</td>
+            <td>{{ player.College }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
 </div>
+
+  <!-- Application Files -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers/TeamCtrl.js"></script>
 </body>
 </html>
